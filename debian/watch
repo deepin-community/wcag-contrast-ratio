@@ -1,0 +1,10 @@
+# watch file for wcag-contrast-ratio
+
+version=4
+
+opts="mode=git, \
+      filenamemangle=s/.+\/(\d\S*)\.tar\.gz/wcag-contrast-ratio-$1.tar.gz/ \
+      uversionmangle=s/(\d)[_\.\-\+]?((RC|rc|pre|dev|beta|alpha)\.?\d*)$/$1~$2/, \
+      dversionmangle=s/\+ds(\.?\d+)?$//" \
+https://github.com/gsnedders/wcag-contrast-ratio.git \
+      refs/tags/v?(\d\S+)

@@ -1,4 +1,14 @@
 #!/usr/bin/make -f
+#export DH_VERBOSE = 1
+
+export PYBUILD_NAME=wcag_contrast_ratio
 
 %:
-	dh $@
+	dh $@ --buildsystem=pybuild
+
+override_dh_auto_clean:
+	dh_auto_clean
+	rm -rf .hypothesis/
+
+override_dh_auto_test:
+	dh_auto_test -- --system=custom --test-args="pytest-3 ./test.py"

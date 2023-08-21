@@ -1,0 +1,22 @@
+#!/bin/bash
+
+set -e -u
+cp test.py "${AUTOPKGTEST_TMP}"
+
+for py3vers in $(py3versions -s); do
+    echo
+    echo "***************************"
+    echo "*** Testing with ${py3vers}"
+    echo "***************************"
+    echo
+    cd ${AUTOPKGTEST_TMP} && \
+        echo -e "Content of current working folder:\n" && \
+        ls -la && \
+        echo -e "Running tests...\n" && \
+        pytest-3 ./test.py -sv && \
+        rm -rf .hypothesis .pytest_cache __pycache__
+done
+
+echo
+
+exit 0
