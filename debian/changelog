@@ -1,5 +1,28 @@
-template-repository (1.0-1) unstable; urgency=medium
+wcag-contrast-ratio (0.9-3) unstable; urgency=medium
 
-  * Initial release
+  [ David (Plasma) Paul ]
+  * [fa416d2] d/control: Mark some build dependencies with <!nocheck>
+  * [142f1a9] d/rules: Add .hypothesis/ to clean target
+  * [3d848a3] d/rules: Remove test-disabling comment
+    (Closes: #1020382)
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+  [ Carsten Schoenert ]
+  * [594b555] d/{control,rules}: Switch to dh-sequence-python3
+  * [2c3925c] autopkgtest: Make 'echo' escape sequences work
+  * [d25d993] d/control: Update Standards-Version to 4.6.1
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Sat, 22 Oct 2022 08:39:49 +0200
+
+wcag-contrast-ratio (0.9-2) unstable; urgency=medium
+
+  * Source only upload
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Tue, 15 Feb 2022 14:54:24 +0100
+
+wcag-contrast-ratio (0.9-1) unstable; urgency=medium
+
+  * [2f4f05a] New upstream version 0.9
+  * [05638f2] First und basic Debianization
+    (Closes: #1004681)
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Tue, 15 Feb 2022 14:53:44 +0100
